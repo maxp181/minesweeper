@@ -148,7 +148,7 @@ function setupBoard(startI, startJ) {
     var i = parseInt(random(15));
     var j = parseInt(random(15));
 
-    if (abs(startI - i) > 1 && abs(startJ - j) > 1) {
+    if (dist(startI, startJ, i, j) > 2) {
       if (board[i][j].value != -1) {
         board[i][j].value = -1;
         tempNumMines --;
